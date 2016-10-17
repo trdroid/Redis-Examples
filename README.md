@@ -1584,3 +1584,12 @@ Execution time of different units:
 Cleanup: may take some time... OK
 make[1]: Leaving directory `/home/droid/software/Redis/redis-3.2.4/src'
 ```
+
+Add path "/home/droid/software/Redis/redis-3.2.4/src" to $PATH variable in ~/.bashrc
+
+```sh
+~$ which redis-server
+/home/droid/software/Redis/redis-3.2.4/src/redis-server
+~$ which redis-cli
+/home/droid/software/Redis/redis-3.2.4/src/redis-cli
+```

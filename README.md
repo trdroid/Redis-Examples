@@ -1593,3 +1593,36 @@ Add path "/home/droid/software/Redis/redis-3.2.4/src" to $PATH variable in ~/.ba
 ~$ which redis-cli
 /home/droid/software/Redis/redis-3.2.4/src/redis-cli
 ```
+
+### Starting Redis server
+
+```sh
+~$ redis-server ~/software/Redis/redis-3.2.4/redis.conf 
+7015:M 17 Oct 20:28:56.799 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+7015:M 17 Oct 20:28:56.799 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+7015:M 17 Oct 20:28:56.799 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.4 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 7015
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+7015:M 17 Oct 20:28:56.822 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+7015:M 17 Oct 20:28:56.822 # Server started, Redis version 3.2.4
+7015:M 17 Oct 20:28:56.822 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+7015:M 17 Oct 20:28:56.822 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+7015:M 17 Oct 20:28:56.822 * The server is now ready to accept connections on port 6379
+
+```
